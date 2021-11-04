@@ -20,7 +20,7 @@ log.info('setup.py entered')
 log.info('$PATH=%s' % os.environ['PATH'])
 
 name = 'url_widget'
-LONG_DESCRIPTION = 'A Jupyter widget to fetch the current notebook's URL'
+LONG_DESCRIPTION = "A Jupyter widget to fetch the current notebook's URL"
 
 # Get url_widget version
 version = get_version(pjoin(name, '_version.py'))
@@ -46,8 +46,9 @@ cmdclass['jsdeps'] = combine_commands(
 
 setup_args = dict(
     name=name,
-    version=version,
-    description='A Jupyter widget to fetch the current notebook's URL',
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],
+    description="A Jupyter widget to fetch the current notebook's URL",
     long_description=LONG_DESCRIPTION,
     include_package_data=True,
     install_requires=[
