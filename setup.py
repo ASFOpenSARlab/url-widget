@@ -9,7 +9,6 @@ from jupyter_packaging import (
     install_npm,
     ensure_targets,
     combine_commands,
-    get_version,
 )
 
 
@@ -21,9 +20,6 @@ log.info('$PATH=%s' % os.environ['PATH'])
 
 name = 'url_widget'
 LONG_DESCRIPTION = "A Jupyter widget to fetch the current notebook's URL"
-
-# Get url_widget version
-version = get_version(pjoin(name, '_version.py'))
 
 js_dir = pjoin(here, 'js')
 
