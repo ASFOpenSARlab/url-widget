@@ -1,0 +1,5 @@
+{
+  "load_extensions": {
+    "url-widget/extension": true
+  }
+}
