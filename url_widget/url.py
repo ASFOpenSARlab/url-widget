@@ -1,7 +1,7 @@
 import ipywidgets as widgets
 from traitlets import Unicode
 
-from _version import version
+from ._version import version
 
 # See js/lib/widget.js for the frontend counterpart to this file.
 
