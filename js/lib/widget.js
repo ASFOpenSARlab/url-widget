@@ -11,7 +11,12 @@ const version_1 = require("./version");
 require("../css/widget.css");
 class URLModel extends base_1.DOMWidgetModel {
     defaults() {
-        return Object.assign(Object.assign({}, super.defaults()), { _model_name: URLModel.model_name, _model_module: URLModel.model_module, _model_module_version: URLModel.model_module_version, _view_name: URLModel.view_name, _view_module: URLModel.view_module, _view_module_version: URLModel.view_module_version, value: '' });
+        return Object.assign(Object.assign({}, super.defaults()),
+            { _model_name: URLModel.model_name,
+            _model_module: URLModel.model_module,
+            _model_module_version: URLModel.model_module_version,
+            _view_name: URLModel.view_name, _view_module: URLModel.view_module,
+            _view_module_version: URLModel.view_module_version, value: '' });
     }
 }
 exports.URLModel = URLModel;
@@ -35,3 +40,4 @@ class URLView extends base_1.DOMWidgetView {
     }
 }
 exports.URLView = URLView;
+exports.URLModel = URLModel;
