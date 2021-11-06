@@ -1,3 +1,6 @@
 [build-system]
-requires = ["jupyter_packaging==0.7.9", "jupyterlab==3.*", "setuptools>=40.8.0", "wheel"]
+requires = ["jupyter_packaging==0.7.9", "jupyterlab==3.*", "setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "url_widget/_version.py"

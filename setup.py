@@ -27,8 +27,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # The name of the project
 name = 'url_widget'
 
-# Get the version
-version = get_version(pjoin(name, '_version.py'))
+# # Get the version
+# version = get_version(pjoin(name, '_version.py'))
 
 
 # Representative files that should exist after a successful build
@@ -65,7 +65,9 @@ cmdclass['jsdeps'] = combine_commands(
 setup_args = dict(
     name            = name,
     description     = 'A custom Jupyter widget that provides thecurrent url of the notebook',
-    version         = version,
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],
+    # version         = version,
     scripts         = glob(pjoin('scripts', '*')),
     cmdclass        = cmdclass,
     packages        = find_packages(),

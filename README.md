@@ -12,7 +12,7 @@ A custom jupyter widget that provides thecurrent url of the notebook
 You can install using `pip`:
 
 ```bash
-pip install url_widget
+python -m pip install url_widget
 ```
 
 If you are using Jupyter Notebook 5.2 or earlier, you may also need to enable
@@ -31,7 +31,7 @@ conda activate url_widget-dev
 
 Install the python. This will also build the TS package.
 ```bash
-pip install -e ".[test, examples]"
+python -m pip install -e ".[test, examples]"
 ```
 
 When developing your extensions, you need to manually enable your extensions with the
