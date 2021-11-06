@@ -1,10 +1,15 @@
-from .url import *
+#!/usr/bin/env python
+# coding: utf-8
 
+# Copyright (c) Alex Lewandowski.
+# Distributed under the terms of the Modified BSD License.
+
+from .url import URLWidget
+from ._version import __version__, version_info
 
 def _jupyter_labextension_paths():
     """Called by Jupyter Lab Server to detect if it is a valid labextension and
     to install the widget
-
     Returns
     =======
     src: Source directory name to copy files from. Webpack outputs generated files
@@ -23,7 +28,6 @@ def _jupyter_labextension_paths():
 def _jupyter_nbextension_paths():
     """Called by Jupyter Notebook Server to detect if it is a valid nbextension and
     to install the widget
-
     Returns
     =======
     section: The section of the Jupyter Notebook Server to change.
@@ -40,6 +44,6 @@ def _jupyter_nbextension_paths():
     return [{
         'section': 'notebook',
         'src': 'nbextension',
-        'dest': 'url-widget',
-        'require': 'url-widget/extension'
+        'dest': 'url_widget',
+        'require': 'url_widget/extension'
     }]
