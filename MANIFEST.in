@@ -1,7 +1,7 @@
 include LICENSE.txt
 include README.md
 
-include pyproject.toml
+include setupbase.py
 include pytest.ini
 include .coverage.rc
 

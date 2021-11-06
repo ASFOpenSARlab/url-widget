@@ -5,6 +5,7 @@
 # Distributed under the terms of the Modified BSD License.
 
 from .url import URLWidget
+from ._version import __version__, version_info
 
 def _jupyter_labextension_paths():
     """Called by Jupyter Lab Server to detect if it is a valid labextension and
@@ -20,7 +21,7 @@ def _jupyter_labextension_paths():
     """
     return [{
         'src': 'labextension',
-        'dest': 'url-widget',
+        'dest': 'url_widget',
     }]
 
 

@@ -156,3 +156,7 @@ url_widget/labextension/*.tgz
 url_widget/labextension
 
 url_widget/*version*
+
+.idea
+Untitled.ipynb
+data.pickle

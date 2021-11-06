@@ -45,7 +45,8 @@ export class URLView extends DOMWidgetView {
     this.model.set('value', document.URL);
     this.model.save_changes();
     this.value_changed();
-    this.model.on('change:value', this.value_changed, this);
+    // this.model.on('change:value', this.value_changed, this);
+    // this.model.save_changes();
   }
 
   value_changed() {

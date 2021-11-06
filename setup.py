@@ -16,7 +16,7 @@ from jupyter_packaging import (
     install_npm,
     ensure_targets,
     combine_commands,
-    skip_if_exists
+    get_version,
 )
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -27,14 +27,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # The name of the project
 name = 'url_widget'
 
-# # Get the version
-# version = get_version(pjoin(name, '_version.py'))
+# Get the version
+version = get_version(pjoin(name, '_version.py'))
 
 
 # Representative files that should exist after a successful build
 jstargets = [
     pjoin(HERE, name, 'nbextension', 'index.js'),
-    pjoin(HERE, name, 'labextension', 'package.json'),
+    pjoin(HERE, 'lib', 'plugin.js'),
 ]
 
 
@@ -48,32 +48,30 @@ package_data_spec = {
 
 data_files_spec = [
     ('share/jupyter/nbextensions/url_widget', 'url_widget/nbextension', '**'),
-    ('share/jupyter/labextensions/url-widget', 'url_widget/labextension', '**'),
-    ('share/jupyter/labextensions/url-widget', '.', 'install.json'),
+    ('share/jupyter/labextensions/url_widget', 'url_widget/labextension', '**'),
+    ('share/jupyter/labextensions/url_widget', '.', 'install.json'),
     ('etc/jupyter/nbconfig/notebook.d', '.', 'url_widget.json'),
 ]
 
 
 cmdclass = create_cmdclass('jsdeps', package_data_spec=package_data_spec,
     data_files_spec=data_files_spec)
-npm_install = combine_commands(
+cmdclass['jsdeps'] = combine_commands(
     install_npm(HERE, build_cmd='build:prod'),
     ensure_targets(jstargets),
 )
-cmdclass['jsdeps'] = skip_if_exists(jstargets, npm_install)
 
 
 setup_args = dict(
     name            = name,
-    description     = 'A Custom Jupyter Widget to get the current notebook URL',
-    use_scm_version=True,
-    setup_requires=['setuptools_scm'],
+    description     = 'A custom Jupyter widget that provides thecurrent url of the notebook',
+    version         = version,
     scripts         = glob(pjoin('scripts', '*')),
     cmdclass        = cmdclass,
     packages        = find_packages(),
     author          = 'Alex Lewandowski',
     author_email    = 'aflewandowski@alaska.edu',
-    url             = 'https://github.com/ASFOpenSARlab/url-widget',
+    url             = 'https://github.com/ASFOpenSARlab/url_widget',
     license         = 'BSD',
     platforms       = "Linux, Mac OS X, Windows",
     keywords        = ['Jupyter', 'Widgets', 'IPython'],

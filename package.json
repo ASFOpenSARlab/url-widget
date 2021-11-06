@@ -1,7 +1,7 @@
 {
-  "name": "url-widget",
+  "name": "url_widget",
   "version": "0.1.0",
-  "description": "A Custom Jupyter Widget to get the current notebook URL",
+  "description": "A custom jupyter widget that provides thecurrent url of the notebook",
   "keywords": [
     "jupyter",
     "jupyterlab",
@@ -13,9 +13,9 @@
     "dist/*.js",
     "css/*.css"
   ],
-  "homepage": "https://github.com/ASFOpenSARlab/url-widget",
+  "homepage": "https://github.com/ASFOpenSARlab/url_widget",
   "bugs": {
-    "url": "https://github.com/ASFOpenSARlab/url-widget/issues"
+    "url": "https://github.com/ASFOpenSARlab/url_widget/issues"
   },
   "license": "BSD-3-Clause",
   "author": {

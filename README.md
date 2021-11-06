@@ -1,11 +1,11 @@
 
-# url-widget
+# url_widget
 
-[![Build Status](https://travis-ci.org/ASFOpenSARlab/url-widget.svg?branch=master)](https://travis-ci.org/ASFOpenSARlab/url_widget)
-[![codecov](https://codecov.io/gh/ASFOpenSARlab/url-widget/branch/master/graph/badge.svg)](https://codecov.io/gh/ASFOpenSARlab/url-widget)
+[![Build Status](https://travis-ci.org/ASFOpenSARlab/url_widget.svg?branch=master)](https://travis-ci.org/ASFOpenSARlab/url_widget)
+[![codecov](https://codecov.io/gh/ASFOpenSARlab/url_widget/branch/master/graph/badge.svg)](https://codecov.io/gh/ASFOpenSARlab/url_widget)
 
 
-A Custom Jupyter Widget to get the current notebook URL
+A custom jupyter widget that provides thecurrent url of the notebook
 
 ## Installation
 

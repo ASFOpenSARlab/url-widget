@@ -175,7 +175,7 @@ texinfo_documents = [
      'url_widget Documentation',
      author,
      'url_widget',
-     'A Custom Jupyter Widget to get the current notebook URL',
+     'A custom jupyter widget that provides thecurrent url of the notebook',
      'Miscellaneous'),
 ]
 

@@ -6,8 +6,8 @@ Developer install
 To install a developer version of url_widget, you will first need to clone
 the repository::
 
-    git clone https://github.com/ASFOpenSARlab/url-widget
-    cd url-widget
+    git clone https://github.com/ASFOpenSARlab/url_widget
+    cd url_widget
 
 Next, install it with a develop install using pip::
 

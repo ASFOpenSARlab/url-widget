@@ -10,8 +10,7 @@ TODO: Add module docstring
 
 from ipywidgets import DOMWidget
 from traitlets import Unicode
-from ._frontend import module_name
-from ._version import version
+from ._frontend import module_name, module_version
 
 
 class URLWidget(DOMWidget):
@@ -19,9 +18,9 @@ class URLWidget(DOMWidget):
     """
     _model_name = Unicode('URLModel').tag(sync=True)
     _model_module = Unicode(module_name).tag(sync=True)
-    _model_module_version = Unicode(version).tag(sync=True)
+    _model_module_version = Unicode(module_version).tag(sync=True)
     _view_name = Unicode('URLView').tag(sync=True)
     _view_module = Unicode(module_name).tag(sync=True)
-    _view_module_version = Unicode(version).tag(sync=True)
+    _view_module_version = Unicode(module_version).tag(sync=True)
 
-    value = Unicode('').tag(sync=True)
+    value = Unicode('URL not updated Python-side yet. To update URL,  display(url_widget_object)').tag(sync=True)

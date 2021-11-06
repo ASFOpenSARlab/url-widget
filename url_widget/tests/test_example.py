@@ -6,9 +6,9 @@
 
 import pytest
 
-from ..url import URLWidget
+from ..url import ExampleWidget
 
 
 def test_example_creation_blank():
-    w = URLWidget()
+    w = ExampleWidget()
     assert w.value == 'Hello World'
