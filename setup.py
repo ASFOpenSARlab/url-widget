@@ -31,6 +31,32 @@ name = 'url_widget'
 # # Get the version
 # version = get_version(pjoin(name, '_version.py'))
 
+def update_version():
+    # read setuptools-scm version file
+    with open("url_widget/_v.py", 'r') as f:
+        scm_lines = f.readlines()
+
+    # read old _version.py
+    with open("url_widget/_version.py", 'r') as f:
+        old_version_lines = f.readlines()
+
+    # Find new scm version
+    for line in scm_lines:
+        regex = "(?<=version_tuple = )\(.{7,50}\)"
+        version = re.search(regex, line)
+        if version:
+            version = version.group(0)
+            break
+
+    # Update version to new scm version
+    new_version_lines = list()
+    for line in old_version_lines:
+        if "version_info = " in line:
+            line = f"version_info = {version}\n"
+        new_version_lines.append(line)
+    with open("_version.py", 'w') as f:
+        f.writelines(new_version_lines)
+
 
 # Representative files that should exist after a successful build
 jstargets = [
@@ -66,8 +92,9 @@ cmdclass['jsdeps'] = combine_commands(
 setup_args = dict(
     name            = name,
     description     = 'A custom Jupyter widget that provides thecurrent url of the notebook',
-    use_scm_version=True,
-    setup_requires=['setuptools_scm'],
+    use_scm_version = True,
+    setup_requires  = ['setuptools_scm'],
+    update_version  = update_version(),
     # version         = version,
     scripts         = glob(pjoin('scripts', '*')),
     cmdclass        = cmdclass,
@@ -120,33 +147,6 @@ setup_args = dict(
 )
 
 
-def update_version():
-    # read setuptools-scm version file
-    with open("url_widget/_v.py", 'r') as f:
-        scm_lines = f.readlines()
-
-    # read old _version.py
-    with open("url_widget/_version.py", 'r') as f:
-        old_version_lines = f.readlines()
-
-    # Find new scm version
-    for line in scm_lines:
-        regex = "(?<=version_tuple = )\(.{7,50}\)"
-        version = re.search(regex, line)
-        if version:
-            version = version.group(0)
-            break
-
-    # Update version to new scm version
-    new_version_lines = list()
-    for line in old_version_lines:
-        if "version_info = " in line:
-            line = f"version_info = {version}\n"
-        new_version_lines.append(line)
-    with open("_version.py", 'w') as f:
-        f.writelines(new_version_lines)
-
-
 if __name__ == '__main__':
     setup(**setup_args)
-    update_version()
+    # update_version()
