@@ -18,7 +18,6 @@ from jupyter_packaging import (
     install_npm,
     ensure_targets,
     combine_commands,
-    get_version,
 )
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -28,9 +27,6 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 # The name of the project
 name = 'url_widget'
-
-# # Get the version
-# version = get_version(pjoin(name, '_version.py'))
 
 def update_version():
     # read setuptools-scm version file
@@ -105,7 +101,6 @@ setup_args = dict(
     description     = 'A custom Jupyter widget that provides thecurrent url of the notebook',
     use_scm_version = True,
     setup_requires  = ['setuptools_scm'],
-    # version         = version,
     scripts         = glob(pjoin('scripts', '*')),
     cmdclass        = cmdclass,
     packages        = find_packages(),
