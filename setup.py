@@ -94,7 +94,7 @@ setup_args = dict(
     description     = 'A custom Jupyter widget that provides thecurrent url of the notebook',
     use_scm_version = True,
     setup_requires  = ['setuptools_scm'],
-    update_version  = update_version(),
+    # update_version  = update_version(),
     # version         = version,
     scripts         = glob(pjoin('scripts', '*')),
     cmdclass        = cmdclass,
@@ -149,4 +149,4 @@ setup_args = dict(
 
 if __name__ == '__main__':
     setup(**setup_args)
-    # update_version()
+    update_version()
