@@ -28,7 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 name = 'url_widget'
 
 # # Get the version
-# version = get_version(pjoin(name, '_version.py'))
+version = get_version(pjoin(name, '_version.py'))
 
 
 # Representative files that should exist after a successful build
@@ -48,8 +48,8 @@ package_data_spec = {
 
 data_files_spec = [
     ('share/jupyter/nbextensions/url_widget', 'url_widget/nbextension', '**'),
-    ('share/jupyter/labextensions/url_widget', 'url_widget/labextension', '**'),
-    ('share/jupyter/labextensions/url_widget', '.', 'install.json'),
+    ('share/jupyter/labextensions/url-widget', 'url_widget/labextension', '**'),
+    ('share/jupyter/labextensions/url-widget', '.', 'install.json'),
     ('etc/jupyter/nbconfig/notebook.d', '.', 'url_widget.json'),
 ]
 
@@ -65,9 +65,7 @@ cmdclass['jsdeps'] = combine_commands(
 setup_args = dict(
     name            = name,
     description     = 'A custom Jupyter widget that provides thecurrent url of the notebook',
-    use_scm_version=True,
-    setup_requires=['setuptools_scm'],
-    # version         = version,
+    version         = version,
     scripts         = glob(pjoin('scripts', '*')),
     cmdclass        = cmdclass,
     packages        = find_packages(),

@@ -40,7 +40,7 @@ module.exports = [
   },
 
   /**
-   * Embeddable url_widget bundle
+   * Embeddable url-widget bundle
    *
    * This bundle is almost identical to the notebook extension bundle. The only
    * difference is in the configuration of the webpack public path for the
@@ -55,7 +55,7 @@ module.exports = [
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'amd',
-        library: "url_widget",
+        library: "url-widget",
         publicPath: 'https://unpkg.com/url_widget@' + version + '/dist/'
     },
     devtool: 'source-map',
