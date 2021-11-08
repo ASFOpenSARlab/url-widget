@@ -155,7 +155,8 @@ url_widget/labextension/*.tgz
 # Packed lab extensions
 url_widget/labextension
 
-url_widget/*version*
+url_widget/_v.py
+url_widget/_version.py
 
 .idea
 Untitled.ipynb
