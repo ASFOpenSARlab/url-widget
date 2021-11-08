@@ -55,8 +55,8 @@ module.exports = [
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
         libraryTarget: 'amd',
-        library: "url_widget",
-        publicPath: 'https://unpkg.com/url_widget@' + version + '/dist/'
+        library: "url-widget",
+        publicPath: 'https://unpkg.com/url-widget@' + version + '/dist/'
     },
     devtool: 'source-map',
     module: {
@@ -77,7 +77,7 @@ module.exports = [
     output: {
       filename: 'embed-bundle.js',
       path: path.resolve(__dirname, 'docs', 'source', '_static'),
-      library: "url_widget",
+      library: "url-widget",
       libraryTarget: 'amd'
     },
     module: {

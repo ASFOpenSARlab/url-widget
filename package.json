@@ -1,8 +1,8 @@
 {
   "test": "test",
-  "name": "url_widget",
-  "version": "0.1.3",
-  "description": "A custom jupyter widget that provides thecurrent url of the notebook",
+  "name": "url-widget",
+  "version": "0.1.2",
+  "description": "A custom jupyter widget that provides the current url of the notebook",
   "keywords": [
     "jupyter",
     "jupyterlab",
@@ -14,9 +14,9 @@
     "dist/*.js",
     "css/*.css"
   ],
-  "homepage": "https://github.com/ASFOpenSARlab/url_widget",
+  "homepage": "https://github.com/ASFOpenSARlab/url-widget",
   "bugs": {
-    "url": "https://github.com/ASFOpenSARlab/url_widget/issues"
+    "url": "https://github.com/ASFOpenSARlab/url-widget/issues"
   },
   "license": "BSD-3-Clause",
   "author": {

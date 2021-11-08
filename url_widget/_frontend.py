@@ -8,4 +8,4 @@
 Information about the frontend package of the widgets.
 """
 
-module_name = "url_widget"
+module_name = "url-widget"
