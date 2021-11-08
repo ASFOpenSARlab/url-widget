@@ -156,7 +156,7 @@ url_widget/labextension/*.tgz
 url_widget/labextension
 
 url_widget/_v.py
-#url_widget/_version.py
+url_widget/_version.py
 
 .idea
 Untitled.ipynb
