@@ -54,7 +54,7 @@ def update_version():
         if "version_info = " in line:
             line = f"version_info = {version}\n"
         new_version_lines.append(line)
-    with open("_version.py", 'w') as f:
+    with open("url_widget/_version.py", 'w') as f:
         f.writelines(new_version_lines)
 
 
