@@ -6,6 +6,7 @@
 
 from __future__ import print_function
 from glob import glob
+import json
 import os
 from os.path import join as pjoin
 import re
@@ -56,6 +57,16 @@ def update_version():
         new_version_lines.append(line)
     with open("url_widget/_version.py", 'w') as f:
         f.writelines(new_version_lines)
+
+    # Update version in package.json
+    version_str = ".".join(map(str, version[1:-1].split(', ')))
+    with open("package.json", "r") as f:
+        data = json.load(f)
+
+    data["version"] = version_str
+
+    with open("package.json", "w") as f:
+        json.dump(data, f)
 
 
 # Representative files that should exist after a successful build
