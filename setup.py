@@ -122,11 +122,11 @@ setup_args = dict(
 
 def update_version():
     # read setuptools-scm version file
-    with open("_v.py", 'r') as f:
+    with open("url_widget/_v.py", 'r') as f:
         scm_lines = f.readlines()
 
     # read old _version.py
-    with open("_version.py", 'r') as f:
+    with open("url_widget/_version.py", 'r') as f:
         old_version_lines = f.readlines()
 
     # Find new scm version
