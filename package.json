@@ -2,7 +2,7 @@
   "test": "test",
   "name": "url-widget",
   "version": "0.0.0",
-  "description": "A custom jupyter widget that provides thecurrent url of the notebook",
+  "description": "A custom jupyter widget that provides the current url of the notebook",
   "keywords": [
     "jupyter",
     "jupyterlab",
